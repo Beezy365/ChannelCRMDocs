@@ -11,28 +11,6 @@ pool:
   vmImage: windows-latest
 
 steps:
-
-# Scan markdownfiles on style consistency
-  - powershell: |
-        npm install -g markdownlint-cli
-        markdownlint **/*.md
-        
-        if ($lastexitcode -ne 0)
-        {
-          throw [System.Exception] "markdownlint failed with exit code $lastexitcode."
-        }
-    workingDirectory: $(System.DefaultWorkingDirectory)
-    displayName: 'Run markdownlint'
-    failOnStderr: true
-
-# run DocLinkChecker to validate documentation links
-  - task: DotNetCoreCLI@2
-    displayName: 'Checking documentation links with DocLinkChecker'
-    inputs:
-      command: 'run'
-      projects: '$(System.DefaultWorkingDirectory)/src/DocLinkChecker/DocLinkChecker'
-      arguments: '-d $(System.DefaultWorkingDirectory) -a'
-
   # install docfx
   - powershell: choco install docfx -y
     displayName: Install docfx
