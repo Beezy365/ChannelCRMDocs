@@ -49,4 +49,11 @@ steps:
       appType: 'webAppLinux'
       WebAppName: 'channelcrmdocs'
       packageForLinux: '$(Build.ArtifactStagingDirectory)/site.zip'
-      RuntimeStack: 'NODE|18-lts'
+      RuntimeStack: 'DOTNETCORE|6.0'
+  - task: AzureWebApp@1
+    inputs:
+      azureSubscription: 'Microsoft Azure-sponsorat (272471bb-b3f1-4888-9177-bba5860f7173)'
+      appType: 'webAppLinux'
+      appName: 'channelcrmdocs2'
+      package: '$(System.DefaultWorkingDirectory)/**/*.zip'
+      runtimeStack: 'DOTNETCORE|6.0'
