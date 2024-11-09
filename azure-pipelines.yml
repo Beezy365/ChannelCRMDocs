@@ -37,5 +37,5 @@ steps:
       azureSubscription: 'Microsoft Azure-sponsorat (272471bb-b3f1-4888-9177-bba5860f7173)'
       appType: 'webAppLinux'
       WebAppName: 'channelcrmdocs'
-      packageForLinux: '$(System.DefaultWorkingDirectory)/**/*.zip'
+      packageForLinux: '$(System.DefaultWorkingDirectory)/_site/*.*'
       RuntimeStack: 'NODE|18-lts'
