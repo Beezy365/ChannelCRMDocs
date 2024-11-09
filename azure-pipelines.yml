@@ -31,16 +31,11 @@ steps:
       docfx build
     displayName: 'Build DocFx site'
 
-  - task: AzureCLI@2
+  - task: AzureRmWebAppDeployment@4
     inputs:
-      azureSubscription: 'Microsoft Azure-sponsorat (272471bb-b3f1-4888-9177-bba5860f7173)'  # Define the Service Connection in Azure DevOps
-      scriptType: bash
-      scriptLocation: inlineScript
-      inlineScript: |
-        # Install Azure Static Web Apps CLI
-        npm install -g @azure/static-web-apps-cli
-
-        # Deploy the site
-        echo "Deploying site to Azure Static Web Apps..."
-        swa deploy ./_site --app-name "channelcrmdocs" --resource-group "Docs"
-    displayName: 'Deploy to Azure Static Web App'
+      ConnectionType: 'AzureRM'
+      azureSubscription: 'Microsoft Azure-sponsorat (272471bb-b3f1-4888-9177-bba5860f7173)'
+      appType: 'webAppLinux'
+      WebAppName: 'channelcrmdocs'
+      packageForLinux: '$(System.DefaultWorkingDirectory)/**/*.zip'
+      RuntimeStack: 'NODE|18-lts'
