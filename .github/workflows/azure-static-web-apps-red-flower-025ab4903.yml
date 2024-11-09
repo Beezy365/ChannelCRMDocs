@@ -1,0 +1,36 @@
+name: Build and Deploy DocFx
+
+on:
+  push:
+    branches:
+      - main   # Trigger on push to the main branch; adjust this if you use another branch
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3
+
+      - name: Set up .NET
+        uses: actions/setup-dotnet@v3
+        with:
+          dotnet-version: '6.x'  # Ensure this matches your DocFx version's requirements
+
+      - name: Install DocFx
+        run: dotnet tool install -g docfx
+
+      - name: Add DocFx to PATH
+        run: echo "$HOME/.dotnet/tools" >> $GITHUB_PATH
+
+      - name: Build DocFx documentation
+        run: docfx build
+
+      - name: Deploy to GitHub Pages
+        uses: MrBeezy/CCRMDocsSite
+        with:
+          personal_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: _site   # This is the default output folder for DocFx
+          publish_branch: gh-pages   # Change if using a different branch for GitHub Pages
+          destination_repo: <username>/<repo>.git  # Optional if deploying to a different repo
