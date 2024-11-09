@@ -24,11 +24,11 @@ steps:
       arguments: '-d $(System.DefaultWorkingDirectory)\docs -si'
 
   - task: UseDotNet@2
-    displayName: "Using .NET Core 3.1.x"
     inputs:
-      version: "3.1.x"
-      packageType: sdk
-
+      packageType: 'sdk'
+      version: '6.x'  # Specify .NET version compatible with DocFx if needed
+      installationPath: $(Agent.ToolsDirectory)/dotnet
+      
   # run docfx
   - powershell: |
         &docfx docfx.json
