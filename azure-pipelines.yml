@@ -1,0 +1,47 @@
+# Starter pipeline
+# Start with a minimal pipeline that you can customize to build and deploy your code.
+# Add steps that build, run tests, deploy, and more:
+# https://aka.ms/yaml
+
+trigger:
+- main
+
+pool:
+  vmImage: ubuntu-latest
+
+steps:
+- script: echo Hello, world!
+  displayName: 'Run a one-line script'
+
+- task: UseDotNet@2
+    inputs:
+      packageType: 'sdk'
+      version: '6.x'  # Specify .NET version compatible with DocFx if needed
+      installationPath: $(Agent.ToolsDirectory)/dotnet
+
+  - task: NodeTool@0
+    inputs:
+      versionSpec: '16.x'  # Node.js is needed for Azure Static Web Apps CLI
+
+  - script: echo "Installing DocFx..."
+      dotnet tool install -g docfx --version $(docfxVersion)
+    displayName: 'Install DocFx'
+
+  - script: echo "Building DocFx documentation..."
+      export PATH="$PATH:~/.dotnet/tools"
+      docfx build
+    displayName: 'Build DocFx site'
+
+  - task: AzureCLI@2
+    inputs:
+      azureSubscription: 'Microsoft Azure-sponsorat (272471bb-b3f1-4888-9177-bba5860f7173)'  # Define the Service Connection in Azure DevOps
+      scriptType: bash
+      scriptLocation: inlineScript
+      inlineScript: |
+        # Install Azure Static Web Apps CLI
+        npm install -g @azure/static-web-apps-cli
+
+        # Deploy the site
+        echo "Deploying site to Azure Static Web Apps..."
+        swa deploy ./_site --app-name "channelcrmdocs" --resource-group "Docs"
+    displayName: 'Deploy to Azure Static Web App'
