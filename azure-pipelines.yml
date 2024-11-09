@@ -7,9 +7,6 @@ pool:
   vmImage: ubuntu-latest
 
 steps:
-  - script: echo Hello, world!
-    displayName: 'Run a one-line script'
-
   - task: UseDotNet@2
     inputs:
       packageType: 'sdk'
@@ -24,6 +21,11 @@ steps:
       echo "Installing DocFx..."
       dotnet tool install -g docfx 
     displayName: 'Install DocFx'
+
+  - script: |
+      echo "Run DocFx..."
+      docfx docfx.json
+    displayName: 'Run DocFx'
 
   - script: |
       echo "Building DocFx documentation..."
