@@ -36,18 +36,11 @@ steps:
   - task: ArchiveFiles@2
     inputs:
       rootFolderOrFile: '$(Pipeline.Workspace)'  # Path to the generated site
-      includeRootFolder: true
+      includeRootFolder: false
       archiveType: 'zip'
       archiveFile: '$(Build.ArtifactStagingDirectory)/site.zip'  # Define the zip file location
       replaceExistingArchive: true
     displayName: 'Archive _site as ZIP'
-
-  - task: PublishBuildArtifacts@1
-    inputs:
-      pathToPublish: '/home/vsts/work/1/s'
-      artifactName: 'site'
-      publishLocation: 'Container'
-    displayName: 'Publish _site as artifact'
 
   - task: AzureRmWebAppDeployment@4
     inputs:
