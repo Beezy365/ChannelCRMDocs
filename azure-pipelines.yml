@@ -34,7 +34,7 @@ steps:
     displayName: 'Build DocFx site'
   - task: PublishBuildArtifacts@1
     inputs:
-      pathToPublish: '$(System.DefaultWorkingDirectory)/_site'
+      pathToPublish: '/home/vsts/work/1/s'
       artifactName: 'site'
       publishLocation: 'Container'
     displayName: 'Publish _site as artifact'
