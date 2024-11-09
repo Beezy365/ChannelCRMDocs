@@ -22,7 +22,7 @@ steps:
 
   - script: |
       echo "Installing DocFx..."
-      dotnet tool install -g docfx --version $(docfxVersion)
+      dotnet tool install -g docfx 
     displayName: 'Install DocFx'
 
   - script: |
