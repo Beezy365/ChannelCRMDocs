@@ -1,6 +1,6 @@
 
 uid: chanimport_id
-title: ChannelCRM Import
+title: ChannelCRM Import - dette er en test
 
 Dette er beskrivelse af ChannelCRM Import filer
 
