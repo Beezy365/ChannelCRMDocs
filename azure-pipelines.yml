@@ -18,7 +18,7 @@ steps:
 
   - task: NodeTool@0
     inputs:
-      versionSpec: '16.x'  # Node.js is needed for Azure Static Web Apps CLI
+      versionSpec: '21.x'  # Node.js is needed for Azure Static Web Apps CLI
 
   - script: |
       echo "Installing DocFx..."
