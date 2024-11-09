@@ -30,7 +30,7 @@ jobs:
       - name: Deploy to GitHub Pages
         uses: MrBeezy/CCRMDocsSite@main
         with:
-          personal_token: ${{ secrets.GITHUB_TOKEN }}
+          personal_token: ${{ secrets.PAT_TOKEN }}
           publish_dir: /   # This is the default output folder for DocFx
           publish_branch: main   # Change if using a different branch for GitHub Pages
           destination_repo: MrBeezy/CCRMDocsSite.git  # Optional if deploying to a different repo
