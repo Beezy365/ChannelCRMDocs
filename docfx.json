@@ -2,9 +2,7 @@
   "build": {
     "content": [
       {
-        "files": [
-          "**/*.{md,yml}"
-        ],
+        "files": ["**/*.{md,yml}","web.config"],
         "exclude": [
           "_site/**"
         ]
