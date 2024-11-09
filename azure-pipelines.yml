@@ -35,8 +35,8 @@ steps:
 
   - task: ArchiveFiles@2
     inputs:
-      rootFolderOrFile: '$(Pipeline.Workspace)/_site'  # Path to the generated site
-      includeRootFolder: false
+      rootFolderOrFile: '$(Pipeline.Workspace)'  # Path to the generated site
+      includeRootFolder: true
       archiveType: 'zip'
       archiveFile: '$(Build.ArtifactStagingDirectory)/site.zip'  # Define the zip file location
       replaceExistingArchive: true
