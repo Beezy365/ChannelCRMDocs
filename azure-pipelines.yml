@@ -32,6 +32,16 @@ steps:
       export PATH="$PATH:~/.dotnet/tools"
       docfx build
     displayName: 'Build DocFx site'
+
+  - task: ArchiveFiles@2
+    inputs:
+      rootFolderOrFile: '$(Pipeline.Workspace)/_site'  # Path to the generated site
+      includeRootFolder: false
+      archiveType: 'zip'
+      archiveFile: '$(Build.ArtifactStagingDirectory)/site.zip'  # Define the zip file location
+      replaceExistingArchive: true
+    displayName: 'Archive _site as ZIP'
+
   - task: PublishBuildArtifacts@1
     inputs:
       pathToPublish: '/home/vsts/work/1/s'
