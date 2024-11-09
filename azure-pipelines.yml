@@ -15,7 +15,7 @@ steps:
 
   - task: NodeTool@0
     inputs:
-      versionSpec: '21.x'  # Node.js is needed for Azure Static Web Apps CLI
+      versionSpec: '18.x'  # Node.js is needed for Azure Static Web Apps CLI
 
   - script: |
       echo "Installing DocFx..."
@@ -45,5 +45,5 @@ steps:
       azureSubscription: 'Microsoft Azure-sponsorat (272471bb-b3f1-4888-9177-bba5860f7173)'
       appType: 'webAppLinux'
       WebAppName: 'channelcrmdocs'
-      packageForLinux: '$(Pipeline.Workspace)/site'
+      packageForLinux: '$(Build.ArtifactStagingDirectory)/site'
       RuntimeStack: 'NODE|18-lts'
