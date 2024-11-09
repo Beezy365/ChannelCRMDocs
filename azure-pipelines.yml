@@ -1,19 +1,16 @@
-# Starter pipeline
-# Start with a minimal pipeline that you can customize to build and deploy your code.
-# Add steps that build, run tests, deploy, and more:
-# https://aka.ms/yaml
+# Starter pipeline for building and deploying DocFx documentation site
 
 trigger:
-- main
+  - main
 
 pool:
   vmImage: ubuntu-latest
 
 steps:
-- script: echo Hello, world!
-  displayName: 'Run a one-line script'
+  - script: echo Hello, world!
+    displayName: 'Run a one-line script'
 
-- task: UseDotNet@2
+  - task: UseDotNet@2
     inputs:
       packageType: 'sdk'
       version: '6.x'  # Specify .NET version compatible with DocFx if needed
@@ -23,11 +20,13 @@ steps:
     inputs:
       versionSpec: '16.x'  # Node.js is needed for Azure Static Web Apps CLI
 
-  - script: echo "Installing DocFx..."
+  - script: |
+      echo "Installing DocFx..."
       dotnet tool install -g docfx --version $(docfxVersion)
     displayName: 'Install DocFx'
 
-  - script: echo "Building DocFx documentation..."
+  - script: |
+      echo "Building DocFx documentation..."
       export PATH="$PATH:~/.dotnet/tools"
       docfx build
     displayName: 'Build DocFx site'
