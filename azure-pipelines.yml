@@ -21,7 +21,7 @@ steps:
   - script: |
       echo "Building DocFx documentation..."
       export PATH="$PATH:~/.dotnet/tools"
-      docfx build
+      docfx build -t statictoc
     displayName: 'Build DocFx site'
 
   - task: ArchiveFiles@2
