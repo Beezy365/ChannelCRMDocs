@@ -42,10 +42,11 @@ steps:
       replaceExistingArchive: true
     displayName: 'Archive _site as ZIP'
 
-  - task: AzureWebApp@1
+  - task: AzureRmWebAppDeployment@4
     inputs:
+      ConnectionType: 'AzureRM'
       azureSubscription: 'Microsoft Azure-sponsorat (272471bb-b3f1-4888-9177-bba5860f7173)'
-      appType: 'webAppLinux'
-      appName: 'channelcrmdocs2'
+      appType: 'webApp'
+      WebAppName: 'channelcrmdofx'
       package: '$(Build.ArtifactStagingDirectory)/site.zip'
-      runtimeStack: 'DOTNETCORE|6.0'
+
