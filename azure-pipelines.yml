@@ -1,5 +1,4 @@
-
-### YamlMime:Pipeline
+### YamlMime:ManagedReference
 
 trigger:
   - main
