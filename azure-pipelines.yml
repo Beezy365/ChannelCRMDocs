@@ -10,22 +10,13 @@ steps:
   - task: UseDotNet@2
     inputs:
       packageType: 'sdk'
-      version: '6.x'  # Specify .NET version compatible with DocFx if needed
+      version: '8.x'  # Specify .NET version compatible with DocFx if needed
       installationPath: $(Agent.ToolsDirectory)/dotnet
-
-  - task: NodeTool@0
-    inputs:
-      versionSpec: '18.x'  # Node.js is needed for Azure Static Web Apps CLI
-
+  
   - script: |
       echo "Installing DocFx..."
       dotnet tool install -g docfx 
     displayName: 'Install DocFx'
-
-  - script: |
-      echo "Run DocFx..."
-      docfx docfx.json
-    displayName: 'Run DocFx'
 
   - script: |
       echo "Building DocFx documentation..."
