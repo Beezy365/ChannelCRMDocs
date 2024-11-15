@@ -47,6 +47,7 @@ steps:
       ConnectionType: 'AzureRM'
       azureSubscription: 'Microsoft Azure-sponsorat (272471bb-b3f1-4888-9177-bba5860f7173)'
       appType: 'webApp'
-      WebAppName: 'channelcrmdofx'
+      WebAppName: 'channelcrmdocfx'
       package: '$(Build.ArtifactStagingDirectory)/site.zip'
+      
 
