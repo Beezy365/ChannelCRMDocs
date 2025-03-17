@@ -1,12 +1,10 @@
-- name: Home
-  href: getting-started.md
 - name: Introduction
   href: introduction.md
 - name: Getting Started
   href: getting-started.md
 - name: User Guide
-  children:
+  items:
     - name: Importing
       href: importfiles.md
-    - name: Templates
-      href: CRM WordAllFields.md
+- name: Templates
+      href: crm-word-all-fields.md
