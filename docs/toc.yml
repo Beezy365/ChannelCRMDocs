@@ -1,10 +1,18 @@
-- name: Introduction
+- name: Introduktion
   href: introduction.md
-- name: Getting Started
+- name: Kom i gang
   href: getting-started.md
-- name: User Guide
+- name: Systemopsætning  
   items:
+    - name: Segmentering
     - name: Importing
       href: importfiles.md
+    - name: Skabeloner
+      href: crm-word-all-fields.md
+      items:
+        - name: Word
+        - name: Excel
+        - name: Outlook
+- name: Integrationer
 - name: Templates
-  href: crm-word-all-fields.md
+  
