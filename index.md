@@ -2,7 +2,7 @@
 _layout: landing
 ---
 
-# Velkommen til ChannelCRM**.
+# Velkommen til ChannelCRM.
 
 Her finder du nyttige oplysninger omkring ChannelCRM, der kan hjælpe dig med at få mere ud af systemet.
 
