@@ -1,11 +1,15 @@
-- name: Introduction
-  href: introduction.md
-  name: Importing
-  href: importfiles.md
-  name: Getting Started
-  href: getting-started.md
-  name: Templates
-  href: CRM WordAllFields.md
-
-
-  
+# Table of Contents (TOC) for MkDocs
+nav:
+  - Home: index.md
+  - Introduction: introduction.md
+  - Getting Started: getting-started.md
+  - User Guide:
+      - Importing: importfiles.md
+      - Templates: CRM WordAllFields.md
+  - Reference:
+      - API Documentation: api.md
+      - Configuration: config.md
+  - FAQ: faq.md
+  - About:
+      - Changelog: changelog.md
+      - License: license.md
