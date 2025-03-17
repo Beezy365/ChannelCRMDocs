@@ -2,10 +2,12 @@
 _layout: landing
 ---
 
-# This is the **HOMEPAGE**.
+# Velkommen til ChannelCRM**.
 
-Refer to [Markdown](http://daringfireball.net/projects/markdown/) for how to write markdown files.
+Her finder du nyttige oplysninger omkring ChannelCRM, der kan hjælpe dig med at få mere ud af systemet.
 
-## Quick Start Notes:
+Hvis der er oplysninger der mangler, så skriv til os på support@channelcrm.dk
 
-1. Add images to the *images* folder if the file is referencing an image.
+Hilsen
+Beezy365 Teamet bag ChannelCRM
+
