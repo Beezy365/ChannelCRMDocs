@@ -1,5 +1,5 @@
 - name: Home
-  href: index.md
+  href: getting-started.md
 - name: Introduction
   href: introduction.md
 - name: Getting Started
@@ -10,17 +10,3 @@
       href: importfiles.md
     - name: Templates
       href: CRM WordAllFields.md
-- name: Reference
-  children:
-    - name: API Documentation
-      href: api.md
-    - name: Configuration
-      href: config.md
-- name: FAQ
-  href: faq.md
-- name: About
-  children:
-    - name: Changelog
-      href: changelog.md
-    - name: License
-      href: license.md
