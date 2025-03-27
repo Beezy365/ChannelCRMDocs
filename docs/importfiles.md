@@ -1,16 +1,4 @@
 
-uid: chanimport_id
-title: ChannelCRM Import - dette er en test
-
-Dette er beskrivelse af ChannelCRM Import filer
-
-ChannelCRM kan importerer .xlsx og .csv filer. Vi anbefaler helt klar at man bruger Excel filer
-| Month    | Savings |
-| -------- | ------- |
-| January  | $250    |
-| February | $80     |
-| March    | $420    |
-
 COMPANY
 		
 | Fieldname|Description|Keyfield|
