@@ -14,5 +14,18 @@
         - name: Excel
         - name: Outlook
 - name: Integrationer
+  items:
+    - name: e-conomic
+      href: econintegration.md
+    - name: UniConta
+      href: uconintegration.md
+    - name: Business Central
+      href: bcintegration.md
+    - name: Excel
+      href: excelintegration.md
+    - name: Power BI
+      href: powerbiintegration.md
+    - name: MailChimp
+      href: mailchimpintegration.md
 - name: Templates
   
