@@ -16,16 +16,16 @@
 - name: Integrationer
   items:
     - name: e-conomic
-      href: econintegration.md
+      href: integration/econintegration.md
     - name: UniConta
-      href: uconintegration.md
+      href: integration/uconintegration.md
     - name: Business Central
-      href: bcintegration.md
+      href: integration/bcintegration.md
     - name: Excel
-      href: excelintegration.md
+      href: integration/excelintegration.md
     - name: Power BI
-      href: powerbiintegration.md
+      href: integration/powerbiintegration.md
     - name: MailChimp
-      href: mailchimpintegration.md
+      href: integration/mailchimpintegration.md
 - name: Templates
   
