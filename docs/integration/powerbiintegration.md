@@ -10,11 +10,11 @@ Når du har noteret din IP adresse, så sender du en mail til [support@channelcr
 
 Hent Power BI desktop appen fra Microsoft, og åben den.
 
-![PowerBi01](images/powerbi01.png)
+![PowerBi01](/images/powerbi01.png)
 
 Tryk herefter på ’Importér data fra SQL Server’. Herefter skal du skrive
 
-![PowerBi02](images/powerbi02.png)
+![PowerBi02](/images/powerbi02.png)
 
 Server = Navnet på det ’cluster’ hvor din løsning ligger. Denne info får du fra ChannelCRM Supporten
 
@@ -22,7 +22,7 @@ Database = her skal du ikke skrive noget
 
 Nu skal du indtaste det brugernavn og password som du også har modtaget fra ChannelCRM supporten. Det er vigtigt at du har valg Database menupunktet til venstre
 
-![PowerBi03](images/powerbi03.png)
+![PowerBi03](/images/powerbi03.png)
 
 Herefter trykker du på ’opret forbindelse’ og så er PowerBi koblet til din database hos ChannelCRM og du kan nu starte arbejdet med rapporter.
 
