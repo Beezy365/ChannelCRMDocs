@@ -5,14 +5,18 @@
 - name: Systemopsætning  
   items:
     - name: Segmentering
+      href: systemsetup/Segmentation.md
     - name: Importing
-      href: importfiles.md
+      href: systemsetup/importfiles.md
     - name: Skabeloner
-      href: crm-word-all-fields.md
+      href: systemsetup/crm-word-all-fields.md
       items:
         - name: Word
+          href: systemsetup/templates/WordAllFields.md
         - name: Excel
+          href: systemsetup/templates/ExcelAllFields.md
         - name: Outlook
+          href: systemsetup/templates/OutlookAllFields.md
 - name: Integrationer
   items:
     - name: e-conomic
